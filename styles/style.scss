@@ -1,0 +1,203 @@
+// <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+// <style>
+//   .attribution { font-size: 11px; text-align: center; }
+//   .attribution a { color: hsl(228, 45%, 44%); }
+// </style>
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 14px;
+  background: hsl(234, 17%, 12%);
+}
+
+.wrapper {
+  padding: 150px 20px 0;
+  height: 100vh;
+  border: 1px solid pink;
+  background: url(../images/pattern-hills.svg) no-repeat bottom center;
+  background-size: 600px 200px;
+
+  header {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .5em;
+    line-height: 1.2;
+    font-size: .8em;
+    margin-bottom: 50px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-gap: 1em;
+  
+    .days, .hours, .minutes, .seconds {
+      position: relative;
+      text-align: center;
+  
+      .top, .down {
+        height: 30px;
+      }
+  
+      .top {
+        background: hsl(240, 8%, 17%);
+        border-radius: 0 0 5px 5px;
+      }
+  
+      .down {
+        background: hsl(236, 21%, 26%);
+        border-radius: 5px 5px 0 0;
+      }
+
+      p {
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3em;
+        color: hsl(345, 95%, 68%);
+      }
+    }
+  }
+
+  .label {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-gap: 1em;
+    text-align: center;
+    color: hsl(237, 18%, 59%);
+    margin-top: 10px;
+    font-size: .8em;
+    letter-spacing: 2px;
+  }
+
+  footer {
+    width: 336px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+    .social {
+      margin-bottom: 60px;
+
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        cursor: pointer;
+      }
+      
+      .facebook {
+        background-image: url(../images/icon-facebook.svg);
+
+        &:hover {
+          background-image: url(../images/icon-facebook-pink.svg);
+        }
+      }
+
+      .pinterest {
+        margin: 0 20px;
+        background-image: url(../images/icon-pinterest.svg);
+
+        &:hover {
+          background-image: url(../images/icon-pinterest-pink.svg);
+        }
+      }
+
+      .instagram {
+        background-image: url(../images/icon-instagram.svg);
+
+        &:hover {
+          background-image: url(../images/icon-instagram-pink.svg);
+        }
+      }
+    }
+
+    .contact {
+      margin-bottom: 5px;
+      font-size: .75em;
+      color: hsl(228, 45%, 44%);
+
+      #fspan {
+        padding-right: 10px;
+        border-right: 2px solid hsl(345, 95%, 68%);
+      }
+    
+      #sspan {
+        padding-left: 10px;
+        border-left: 2px solid hsl(228, 45%, 44%);
+      }
+    
+      a {
+        color:  hsl(345, 95%, 68%);
+        text-decoration: underline;
+        text-decoration-color:  hsl(345, 95%, 68%);
+    
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    background-size: auto;
+
+    main {
+      width: 336px;
+      width: 500px;
+      margin: auto;
+      grid-gap: 2.8em;
+
+      .days, .hours, .minutes, .seconds {
+
+        .top, .down {
+          width: 100px;
+          height: 30px;
+        }
+        
+        p {
+          font-size: 3.5em;
+          bottom: 0;
+        }
+      }
+    }
+
+    .label {
+      width: 500px;
+      margin: 10px auto 0;
+      grid-gap: 3em;
+      font-size: 1em;
+
+      p {
+        width: 100px;
+      }
+    }
+
+    footer {
+      width: 100%;
+
+      .contact {
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+

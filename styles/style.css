@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 14px;
+  background: #191a24;
+}
+
+.wrapper {
+  padding: 150px 20px 0;
+  height: 100vh;
+  border: 1px solid pink;
+  background: url(../images/pattern-hills.svg) no-repeat bottom center;
+  background-size: 600px 200px;
+}
+
+.wrapper header {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .5em;
+  line-height: 1.2;
+  font-size: .8em;
+  margin-bottom: 50px;
+}
+
+.wrapper main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(70px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-gap: 1em;
+}
+
+.wrapper main .days, .wrapper main .hours, .wrapper main .minutes, .wrapper main .seconds {
+  position: relative;
+  text-align: center;
+}
+
+.wrapper main .days .top, .wrapper main .days .down, .wrapper main .hours .top, .wrapper main .hours .down, .wrapper main .minutes .top, .wrapper main .minutes .down, .wrapper main .seconds .top, .wrapper main .seconds .down {
+  height: 30px;
+}
+
+.wrapper main .days .top, .wrapper main .hours .top, .wrapper main .minutes .top, .wrapper main .seconds .top {
+  background: #28282f;
+  border-radius: 0 0 5px 5px;
+}
+
+.wrapper main .days .down, .wrapper main .hours .down, .wrapper main .minutes .down, .wrapper main .seconds .down {
+  background: #343650;
+  border-radius: 5px 5px 0 0;
+}
+
+.wrapper main .days p, .wrapper main .hours p, .wrapper main .minutes p, .wrapper main .seconds p {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 3em;
+  color: #fb6087;
+}
+
+.wrapper .label {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(70px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-gap: 1em;
+  text-align: center;
+  color: #8486a9;
+  margin-top: 10px;
+  font-size: .8em;
+  letter-spacing: 2px;
+}
+
+.wrapper footer {
+  width: 336px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.wrapper footer .social {
+  margin-bottom: 60px;
+}
+
+.wrapper footer .social .icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.wrapper footer .social .facebook {
+  background-image: url(../images/icon-facebook.svg);
+}
+
+.wrapper footer .social .facebook:hover {
+  background-image: url(../images/icon-facebook-pink.svg);
+}
+
+.wrapper footer .social .pinterest {
+  margin: 0 20px;
+  background-image: url(../images/icon-pinterest.svg);
+}
+
+.wrapper footer .social .pinterest:hover {
+  background-image: url(../images/icon-pinterest-pink.svg);
+}
+
+.wrapper footer .social .instagram {
+  background-image: url(../images/icon-instagram.svg);
+}
+
+.wrapper footer .social .instagram:hover {
+  background-image: url(../images/icon-instagram-pink.svg);
+}
+
+.wrapper footer .contact {
+  margin-bottom: 5px;
+  font-size: .75em;
+  color: #3e52a3;
+}
+
+.wrapper footer .contact #fspan {
+  padding-right: 10px;
+  border-right: 2px solid #fb6087;
+}
+
+.wrapper footer .contact #sspan {
+  padding-left: 10px;
+  border-left: 2px solid #3e52a3;
+}
+
+.wrapper footer .contact a {
+  color: #fb6087;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #fb6087;
+          text-decoration-color: #fb6087;
+}
+
+.wrapper footer .contact a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    background-size: auto;
+  }
+  .wrapper main {
+    width: 336px;
+    width: 500px;
+    margin: auto;
+    grid-gap: 2.8em;
+  }
+  .wrapper main .days .top, .wrapper main .days .down, .wrapper main .hours .top, .wrapper main .hours .down, .wrapper main .minutes .top, .wrapper main .minutes .down, .wrapper main .seconds .top, .wrapper main .seconds .down {
+    width: 100px;
+    height: 30px;
+  }
+  .wrapper main .days p, .wrapper main .hours p, .wrapper main .minutes p, .wrapper main .seconds p {
+    font-size: 3.5em;
+    bottom: 0;
+  }
+  .wrapper .label {
+    width: 500px;
+    margin: 10px auto 0;
+    grid-gap: 3em;
+    font-size: 1em;
+  }
+  .wrapper .label p {
+    width: 100px;
+  }
+  .wrapper footer {
+    width: 100%;
+  }
+  .wrapper footer .contact {
+    font-size: 1.1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
