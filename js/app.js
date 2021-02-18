@@ -4,18 +4,19 @@ const minutes = document.getElementById('minute');
 const seconds = document.getElementById('second');
 
 
-const cDown = new Date('February 16, 2021');
+const presentYear = new Date().getFullYear();
+const newYearTime = new Date(`January 01 ${ presentYear + 1 }`);
 
 function countDown() {
   const now = new Date();
-  const diff = cDown - now;
+  const diff = newYearTime - now;
 
   let d, h, m, s;
 
-  d = Math.floor(diff / 1000 / 60 / 60 / 24);
-  h = Math.floor(diff / 1000 / 60 / 60) % 24;
-  m = Math.floor(diff / 1000 / 60) % 60;
-  s = Math.floor(diff / 1000) % 60;
+  d = diff < 0 ? 0 : Math.floor(diff / 1000 / 60 / 60 / 24);
+  h = diff < 0 ? 0 : Math.floor(diff / 1000 / 60 / 60) % 24;
+  m = diff < 0 ? 0 : Math.floor(diff / 1000 / 60) % 60;
+  s = diff < 0 ? 0 : Math.floor(diff / 1000) % 60;
 
   days.textContent = (d < 10) ? '0' + d : d;
   hours.textContent = (h < 10) ? '0' + h : h;
